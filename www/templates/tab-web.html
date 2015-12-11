@@ -1,0 +1,45 @@
+<ion-view view-title="Apps Distribuion" hide-nav-bar="true">
+	<ion-header-bar class="top">
+		<h1 class="title" style="right:0px !important;">Apps Distribution</h1>
+		<button class="button button-icon ion-plus" ng-click="modal.show()"></button>
+		<button class="button button-icon  ion-log-out" ng-click="logout()"></button>
+	</ion-header-bar>
+	<ion-content class="padding">
+		<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="text" placeholder="Search apps by name" ng-model="query" style="color: #263137 !important;">
+		</label>
+		<ion-list>
+			<ion-item ng-repeat="app in apps | filter:query | orderBy: '-created_date'" style="padding-left:5px !important; padding-right:5px; !important;">
+				<div class="list card" style="border: 1px solid #D3D3D3;">
+					<div class="item item-avatar" style="padding-left: 47px !important;">
+						<img src="img/Web.png" style="margin-top: 30px;">
+
+						<div class="row">
+							<div class="labelcolour col col-50">Application Name: </div>
+							<div class="labelvalue col col-50"> <p>{{app.app_name}}</p></div>
+						</div>
+						<div class="row">
+							<div class="labelcolour col col-50">Date Added: </div>
+							<div class="labelvalue col col-50"> <p>{{app.created_date}}</p></div>
+						</div>
+						<div class="row">
+							<div class="labelcolour col col-50">Added By:</div>
+							<div class="labelvalue col col-50"> <p>{{app.created_by.displayName}}</p></div>
+						</div>
+					</div>
+					<div class="item item-body">
+						<div class="labelcolour">
+							{{app.app_desc}}
+						</div>
+					</div>
+					<div class="item tabs tabs-secondary tabs-icon-left">
+						<a class="tab-item labelvalue" href="{{app.app_url}}" target="_blank">
+							<i class="icon ion-android-open"></i>Launch
+						</a>
+					</div>
+				</div>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

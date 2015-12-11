@@ -1,0 +1,46 @@
+/* Empty. Add your own CSS if you like */
+
+.bar {
+  border-color: #00B2FF !important;
+  background-color: #00B2FF !important;
+}
+.bar-stable {
+  border-color: #00B2FF !important;
+  background-color: #00B2FF !important;
+  font-family: 'Helvetica Neue', 'HelveticaNeue-Light' !important;
+}
+.title {
+  font-size: 20px !important;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica, Arial', 'Lucida Grande', sans-serif !important;
+  text-align: center !important;
+  color: #fff !important;
+  left: 0px !important;
+  right: 0px !important;
+}
+.labelvalue p {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light' !important;
+  ;
+  color: #F38631 !important;
+  font-weight: 500;
+}
+.labelvalue {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light' !important;
+  ;
+  color: #F38631 !important;
+  font-weight: 500;
+}
+.labelcolour p {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light'!important;
+  ;
+  color: #263137 !important;
+  font-weight: 500;
+  margin-right: 8px;
+}
+.propertyitem {
+  height: 97px;
+  margin: 10px;
+  padding: 10px;
+  //box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  border: 1px solid #D3D3D3;
+}

@@ -1,0 +1,9 @@
+{
+  "firebase": "lnsappdistribution",
+  "public": "www",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

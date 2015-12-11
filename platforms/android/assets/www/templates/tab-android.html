@@ -1,0 +1,32 @@
+<ion-view view-title="LifeEngage Android Apps Distribuion">
+	<ion-content class="padding">
+		<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="text" placeholder="Search apps by name" ng-model="query">
+		</label>
+		<ion-list>
+			<ion-item ng-repeat="app in apps | filter:query | orderBy: '-dateAdded'">
+				<div class="list card">
+					<div class="item item-avatar">
+						<img src="/img/Android.png">
+						<h2>{{app.appName}}</h2>
+						<p>Date Added : {{app.dateAdded}}</p>
+					</div>
+					<div class="item item-body">
+						<div>
+							{{app.appDesc}}
+						</div>
+					</div>
+					<div class="item tabs tabs-secondary tabs-icon-left">
+						<!--<a class="tab-item" href="mailto:?Subject=LifeEngage App Download&body=You+can+download+the+app+from+the+below+link.%0D%0A%0D%0A{{app.url}}">
+							<i class="icon ion-share"></i> Share
+						</a>-->
+						<a class="tab-item" href="{{app.url}}">
+							<i class="icon ion-ios-cloud-download"></i>Download
+						</a>
+					</div>
+				</div>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

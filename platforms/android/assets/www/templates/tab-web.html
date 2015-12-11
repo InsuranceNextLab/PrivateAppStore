@@ -1,0 +1,107 @@
+<ion-view view-title="LifeEngage Web Apps Distribuion">
+	<ion-content class="padding">
+		<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="text" placeholder="Search apps by name" ng-model="query">
+		</label>
+		<ion-list>
+			<!--<ion-item ng-repeat="app in apps | filter:query | orderBy: '-dateAdded'" ng-if="$index % 4 === 0">
+				<div class="col col-25" ng-if="$index < apps.length">
+					<div class="list card" width="100%">
+						<div class="item item-avatar">
+							<img src="/img/Web.png">
+							<h2>{{apps[$index].appName}}</h2>
+							<p>Date Added : {{apps[$index].dateAdded}}</p>
+						</div>
+						<div class="item item-body">
+							<div>
+								{{apps[$index].appDesc}}
+							</div>
+						</div>
+						<div class="item tabs tabs-secondary tabs-icon-left">
+							<a class="tab-item" href="{{apps[$index].url}}" target="_blank">
+								<i class="icon ion-android-open"></i>Launch
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col col-25" ng-if="$index + 1 < apps.length">
+					<div class="list card" width="100%">
+						<div class="item item-avatar">
+							<img src="/img/Web.png">
+							<h2>{{apps[$index+1].appName}}</h2>
+							<p>Date Added : {{apps[$index+1].dateAdded}}</p>
+						</div>
+						<div class="item item-body">
+							<div>
+								{{apps[$index+1].appDesc}}
+							</div>
+						</div>
+						<div class="item tabs tabs-secondary tabs-icon-left">
+							<a class="tab-item" href="{{apps[$index+1].url}}" target="_blank">
+								<i class="icon ion-android-open"></i>Launch
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col col-25" ng-if="$index + 2 < apps.length">
+					<div class="list card" width="100%">
+						<div class="item item-avatar">
+							<img src="/img/Web.png">
+							<h2>{{apps[$index+2].appName}}</h2>
+							<p>Date Added : {{apps[$index+2].dateAdded}}</p>
+						</div>
+						<div class="item item-body">
+							<div>
+								{{apps[$index+2].appDesc}}
+							</div>
+						</div>
+						<div class="item tabs tabs-secondary tabs-icon-left">
+							<a class="tab-item" href="{{apps[$index+2].url}}" target="_blank">
+								<i class="icon ion-android-open"></i>Launch
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col col-25" ng-if="$index + 3 < apps.length">
+					<div class="list card" width="100%">
+						<div class="item item-avatar">
+							<img src="/img/Web.png">
+							<h2>{{apps[$index+3].appName}}</h2>
+							<p>Date Added : {{apps[$index+3].dateAdded}}</p>
+						</div>
+						<div class="item item-body">
+							<div>
+								{{apps[$index+3].appDesc}}
+							</div>
+						</div>
+						<div class="item tabs tabs-secondary tabs-icon-left">
+							<a class="tab-item" href="{{apps[$index+3].url}}" target="_blank">
+								<i class="icon ion-android-open"></i>Launch
+							</a>
+						</div>
+					</div>
+				</div>
+			</ion-item>-->
+			<ion-item ng-repeat="app in apps | filter:query | orderBy: '-dateAdded'">
+				<div class="list card">
+					<div class="item item-avatar">
+						<img src="/img/Web.png">
+						<h2>{{app.appName}}</h2>
+						<p>Date Added : {{app.dateAdded}}</p>
+					</div>
+					<div class="item item-body">
+						<div>
+							{{app.appDesc}}
+						</div>
+					</div>
+					<div class="item tabs tabs-secondary tabs-icon-left">
+						<a class="tab-item" href="{{app.url}}" target="_blank">
+							<i class="icon ion-android-open"></i>Launch
+						</a>
+					</div>
+				</div>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

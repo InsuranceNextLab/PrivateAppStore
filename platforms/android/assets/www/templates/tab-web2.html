@@ -1,0 +1,41 @@
+<ion-view view-title="LifeEngage Web Apps Distribuion">
+	<ion-content class="padding">
+		<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="text" placeholder="Search apps by name" ng-model="query">
+		</label>
+		<div class="main">
+			<ul class="cbp-ig-grid" ng-repeat="app in apps | filter:query | orderBy: '-dateAdded'">
+				<li>
+					<a href="{{app.url}}" target="_blank">
+						<span><img src="/img/Web.png" alt=""/></span>
+						<h3 class="cbp-ig-title">{{app.appName}}</h3>
+						<span class="cbp-ig-category">{{app.appDesc}}</span>
+					</a>
+				</li>
+			</ul>
+
+		</div>
+		<!--<ion-list>
+			<ion-item ng-repeat="app in apps | filter:query | orderBy: '-dateAdded'">
+				<div class="list card">
+					<div class="item item-avatar">
+						<img src="/img/Web.png">
+						<h2>{{app.appName}}</h2>
+						<p>Date Added : {{app.dateAdded}}</p>
+					</div>
+					<div class="item item-body">
+						<div>
+							{{app.appDesc}}
+						</div>
+					</div>
+					<div class="item tabs tabs-secondary tabs-icon-left">
+						<a class="tab-item" href="{{app.url}}" target="_blank">
+							<i class="icon ion-android-open"></i>Launch
+						</a>
+					</div>
+				</div>
+			</ion-item>
+		</ion-list>-->
+	</ion-content>
+</ion-view>

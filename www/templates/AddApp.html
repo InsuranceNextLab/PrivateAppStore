@@ -1,0 +1,35 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-positive">
+    <h1 class="title">Add Application</h1>
+    <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Application Name</span>
+        <input ng-model="user.appname" type="text">
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Platform Type
+        </div>
+        <select ng-model="user.type"  ng-change="changeItem(user)">
+          <option value="">Please Select..</option>
+          <option value="Android" ng-selected="android.test">Android</option>
+          <option value="IOS" ng-selected="ios.test">IOS</option>
+          <option value="Web" ng-selected="webs.test">Web</option>
+          <option value="Wear" ng-selected="wear.test">Wear</option>
+        </select>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Application URL</span>
+        <input ng-model="user.url" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Application Description</span>
+        <input ng-model="user.desc" type="text">
+      </label>
+      <button class="button button-full button-positive" ng-click="addApplication(user)">Create</button>
+    </div>
+  </ion-content>
+</ion-modal-view>

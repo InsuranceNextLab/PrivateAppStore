@@ -1,4 +1,4 @@
-<ion-view view-title="Apps Distribuion" hide-nav-bar="true">
+<ion-view view-title="Web Apps" hide-nav-bar="true">
 	<ion-header-bar class="top">
 		<h1 class="title" style="right:0px !important;">Apps Distribution</h1>
 		<button class="button button-icon ion-plus" ng-click="modal.show()"></button>
@@ -17,15 +17,21 @@
 
 						<div class="row">
 							<div class="labelcolour col col-50">Application Name: </div>
-							<div class="labelvalue col col-50"> <p>{{app.app_name}}</p></div>
+							<div class="labelvalue col col-50">
+								<p>{{app.app_name}}</p>
+							</div>
 						</div>
 						<div class="row">
 							<div class="labelcolour col col-50">Date Added: </div>
-							<div class="labelvalue col col-50"> <p>{{app.created_date}}</p></div>
+							<div class="labelvalue col col-50">
+								<p>{{app.created_date}}</p>
+							</div>
 						</div>
 						<div class="row">
 							<div class="labelcolour col col-50">Added By:</div>
-							<div class="labelvalue col col-50"> <p>{{app.created_by.displayName}}</p></div>
+							<div class="labelvalue col col-50">
+								<p>{{app.created_by.displayName}}</p>
+							</div>
 						</div>
 					</div>
 					<div class="item item-body">
